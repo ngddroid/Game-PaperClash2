@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 11 and lower: back up the save file (progress, coins, settings). -->
+<full-backup-content>
+    <include domain="file" path="paperclash_save.json" />
+    <include domain="file" path="paperclash_save.json.bak" />
+</full-backup-content>

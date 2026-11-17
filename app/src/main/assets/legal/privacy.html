@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>Privacy Policy · Paper Clash 2</title>
+  <meta name="description" content="How the Paper Clash 2 game by NG Studio handles your information.">
+  <!--
+    Paper Clash 2 · Privacy Policy · NG Studio
+    Shown in the app by a WebView (WebViewAssetLoader, JavaScript off, no network),
+    so this page has no scripts and no external files. Fonts load from ../fonts/.
+    Before release, replace the highlighted placeholders: [contact email].
+    Mail links carry the address URL-encoded: mailto:%5Bcontact%20email%5D
+  -->
+  <style>
+/* Paper Clash 2 legal pages: "papercraft desk" theme.
+   Self-contained: no scripts, no network. The fonts ship with the app in ../fonts/.
+   Every graphic is inline SVG, a CSS gradient or a data: URI. */
+
+@font-face {
+  font-family: "PC Baloo";
+  src: url("../fonts/Baloo2-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "PC Fredoka";
+  src: url("../fonts/Fredoka-600.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "PC Fredoka";
+  src: url("../fonts/Fredoka-700.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+}
+
+/* ---------- Design tokens ---------- */
+:root {
+  color-scheme: light dark;
+
+  /* Game palette */
+  --cream: #FFF6E6;
+  --paper: #FFFDF8;
+  --ink: #1F2A4A;
+  --ink-soft: #3A4A75;
+  --coral: #FF6B57;
+  --sun: #FFC83D;
+  --mint: #2EC4A0;
+  --sky: #4BA3FF;
+  --grape: #7A5CFF;
+  --gum: #FF7AB6;
+  --kraft: #C89B6D;
+
+  --font-head: "PC Baloo", "Baloo 2", "Fredoka", "Arial Rounded MT Bold", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body: "PC Fredoka", "Fredoka", "Nunito", "Varela Round", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  /* Light theme: cream cutting mat, paper-white cards */
+  --desk: var(--cream);
+  --desk-glow: rgba(255, 255, 255, .75);
+  --mat-line: rgba(200, 155, 109, .17);
+  --mat-line-major: rgba(200, 155, 109, .34);
+  --card: var(--paper);
+  --card-soft: #FFF3DD;
+  --card-edge: rgba(31, 42, 74, .07);
+  --note: #FFF1C4;
+  --text: var(--ink);
+  --body: #2C3962;
+  --text-soft: var(--ink-soft);
+  --rule: rgba(31, 42, 74, .14);
+  --sticker-edge: #FFFFFF;
+  --shadow: 0 1px 2px rgba(31, 42, 74, .08), 0 10px 22px -12px rgba(31, 42, 74, .3), 0 24px 36px -28px rgba(31, 42, 74, .42);
+  --shadow-sm: 0 1px 1px rgba(31, 42, 74, .1), 0 4px 10px -5px rgba(31, 42, 74, .34);
+  --sky-top: #CDE5FF;
+  --sky-bottom: #EFF7FF;
+  --cloud: #FFFFFF;
+  --ph-bg: rgba(255, 200, 61, .45);
+
+  /* Washi tape colours (semi-transparent) and patterns */
+  --tape-hi: rgba(255, 255, 255, .5);
+  --tape-sun: rgba(255, 200, 61, .82);
+  --tape-sky: rgba(75, 163, 255, .6);
+  --tape-gum: rgba(255, 122, 182, .66);
+  --tape-mint: rgba(46, 196, 160, .64);
+  --tape-coral: rgba(255, 107, 87, .62);
+  --tape-grape: rgba(122, 92, 255, .5);
+  --p-stripes: repeating-linear-gradient(-45deg, var(--tape-hi) 0 4px, transparent 4px 9px);
+  --p-dots: radial-gradient(circle, var(--tape-hi) 0 1.7px, transparent 2.3px) 0 0 / 8px 8px;
+  --p-grid: linear-gradient(90deg, var(--tape-hi) 0 1.5px, transparent 1.5px) 0 0 / 7px 7px, linear-gradient(var(--tape-hi) 0 1.5px, transparent 1.5px) 0 0 / 7px 7px;
+
+  /* Paper grain (SVG feTurbulence) and list icons. The xmlns inside these data: URIs is the SVG namespace name, not a request. */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .12 0 0 0 0 .16 0 0 0 0 .29 0 0 0 .6 -.25'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  --grain-soft: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='2' seed='9' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .34 0 0 0 0 .2 0 0 0 .4 -.17'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  --ic-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%232EC4A0'/%3E%3Cpath d='M6.8 12.4l3.4 3.4 7-7.6' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --ic-cross: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23FF6B57'/%3E%3Cpath d='M8.3 8.3l7.4 7.4M15.7 8.3l-7.4 7.4' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* Dark theme: navy paper on a night desk. Only applies when the WebView reports a dark colour scheme. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --desk: #121A2E;
+    --desk-glow: rgba(75, 163, 255, .14);
+    --mat-line: rgba(255, 246, 230, .045);
+    --mat-line-major: rgba(255, 246, 230, .095);
+    --card: #1F2A4A;
+    --card-soft: #28355D;
+    --card-edge: rgba(255, 246, 230, .09);
+    --note: #2A3561;
+    --text: #FFF6E6;
+    --body: #EAE3D4;
+    --text-soft: #C9D0E6;
+    --rule: rgba(255, 246, 230, .17);
+    --sticker-edge: #FFF6E6;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 12px 24px -12px rgba(0, 0, 0, .65), 0 26px 40px -28px rgba(0, 0, 0, .75);
+    --shadow-sm: 0 1px 1px rgba(0, 0, 0, .35), 0 4px 10px -4px rgba(0, 0, 0, .6);
+    --sky-top: #141D45;
+    --sky-bottom: #28327A;
+    --cloud: rgba(255, 255, 255, .08);
+    --ph-bg: rgba(255, 200, 61, .26);
+    --tape-hi: rgba(255, 255, 255, .34);
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .96 0 0 0 0 .9 0 0 0 .42 -.18'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    --grain-soft: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='2' seed='9' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .96 0 0 0 0 .9 0 0 0 .3 -.13'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  }
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background-color: var(--desk);
+  /* Cutting mat: grain, soft light, major and minor grid lines */
+  background-image:
+    var(--grain),
+    radial-gradient(120% 70% at 50% -10%, var(--desk-glow), transparent 70%),
+    linear-gradient(var(--mat-line-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--mat-line-major) 1px, transparent 1px),
+    linear-gradient(var(--mat-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--mat-line) 1px, transparent 1px);
+  background-size: 220px 220px, 100% 1100px, 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  background-repeat: repeat, no-repeat, repeat, repeat, repeat, repeat;
+  background-position: 0 0, 0 0, 11px 11px, 11px 11px, 11px 11px, 11px 11px;
+}
+
+body {
+  margin: 0;
+  color: var(--body);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: rgba(255, 107, 87, .2);
+}
+
+::selection {
+  background: rgba(255, 200, 61, .55);
+  color: var(--ink);
+}
+
+.page {
+  max-width: 46rem;
+  margin: 0 auto;
+  /* env() keeps the footer clear of the gesture bar if the WebView is drawn edge-to-edge */
+  padding: 18px 16px calc(6px + env(safe-area-inset-bottom, 0px));
+  /* Safety net only: nothing is wider than the screen. */
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+p {
+  margin: 0 0 .8rem;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--text);
+}
+
+a {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--coral);
+  text-decoration-thickness: 2px;
+  text-underline-offset: .18em;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--sky);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+svg {
+  max-width: 100%;
+}
+
+/* Placeholders the developer still has to fill in */
+.ph {
+  font-weight: 700;
+  color: var(--text);
+  background: var(--ph-bg);
+  border-bottom: 2px dashed var(--coral);
+  border-radius: .25em .25em 0 0;
+  padding: 0 .22em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+a.ph-link {
+  text-decoration: none;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  --ta-p: var(--p-stripes);
+  --ta-c: var(--tape-coral);
+  --tb-p: var(--p-dots);
+  --tb-c: var(--tape-mint);
+  position: relative;
+  margin: 12px 0 36px;
+  background: var(--grain-soft), var(--card);
+  border-radius: 22px;
+  scroll-margin-top: 40px;
+  /* Two coloured sheets peeking out from under the card */
+  box-shadow: inset 0 0 0 1px var(--card-edge), 7px 9px 0 -1px var(--sun), -6px 15px 0 -2px var(--coral), var(--shadow);
+  text-align: center;
+}
+
+.hero-sky {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px 22px 0 0;
+  padding: 22px 10px 10px;
+  background-image: linear-gradient(180deg, var(--sky-top), var(--sky-bottom));
+}
+
+/* Paper clouds */
+.hero-sky::before,
+.hero-sky::after {
+  content: "";
+  position: absolute;
+  width: 96px;
+  height: 44px;
+  background:
+    radial-gradient(circle at 26px 28px, var(--cloud) 0 16px, transparent 16.5px),
+    radial-gradient(circle at 50px 20px, var(--cloud) 0 20px, transparent 20.5px),
+    radial-gradient(circle at 74px 29px, var(--cloud) 0 14px, transparent 14.5px),
+    linear-gradient(var(--cloud), var(--cloud)) 26px 28px / 48px 15px no-repeat;
+}
+
+.hero-sky::before {
+  left: -30px;
+  top: 30px;
+}
+
+.hero-sky::after {
+  right: -34px;
+  top: 104px;
+  transform: scale(.8);
+}
+
+.emblem {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.hero-body {
+  position: relative;
+  padding: 12px 18px 24px;
+}
+
+/* Pinking-shears edge between the sky and the paper */
+.hero-body::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -7px;
+  height: 7px;
+  background: conic-gradient(from 135deg at 50% 0, var(--card) 0 90deg, transparent 90deg) 0 0 / 14px 7px repeat-x;
+}
+
+.wordmark {
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.45rem;
+  line-height: 1.15;
+  letter-spacing: .01em;
+  color: var(--text);
+}
+
+.two {
+  display: inline-block;
+  min-width: 1.5em;
+  margin-left: .12em;
+  padding: .1em .22em 0;
+  color: var(--ink);
+  background: var(--sun);
+  border: 3px solid var(--sticker-edge);
+  border-radius: .55em;
+  box-shadow: var(--shadow-sm);
+  transform: rotate(-7deg);
+  line-height: 1.1;
+}
+
+h1 {
+  margin: .2em 0 .12em;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 2.25rem;
+  line-height: 1.05;
+  color: var(--text);
+}
+
+.byline {
+  margin: 0 0 .9rem;
+  color: var(--text-soft);
+  font-size: .95rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  max-width: 100%;
+  margin: 0;
+  padding: .42rem .95rem .42rem .55rem;
+  color: var(--cream);
+  background: var(--ink);
+  border: 3px solid var(--sticker-edge);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  font-weight: 700;
+  font-size: .92rem;
+  line-height: 1.25;
+  transform: rotate(-1.5deg);
+}
+
+.pill svg {
+  flex: none;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  --c: var(--coral);
+  --c-text: var(--ink);
+  --ta-p: var(--p-stripes);
+  --ta-c: var(--tape-sun);
+  --tb-p: var(--p-dots);
+  --tb-c: var(--tape-sky);
+  position: relative;
+  margin: 0 0 32px;
+  padding: 24px 18px 20px;
+  background: var(--grain-soft), var(--card);
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 1px var(--card-edge), var(--shadow);
+  scroll-margin-top: 36px;
+}
+
+.card > :last-child {
+  margin-bottom: 0;
+}
+
+.card:target {
+  box-shadow: inset 0 0 0 1px var(--card-edge), 0 0 0 3px var(--sun), var(--shadow);
+}
+
+.card h2 {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  margin: 0 0 .8rem;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.32rem;
+  line-height: 1.15;
+  color: var(--text);
+}
+
+.card h2 > span:last-child {
+  min-width: 0;
+}
+
+.card h3 {
+  margin: 1.2rem 0 .45rem;
+  padding-bottom: 5px;
+  font-weight: 700;
+  font-size: 1.06rem;
+  line-height: 1.35;
+  color: var(--text);
+  background: linear-gradient(var(--c), var(--c)) 0 100% / 2.2rem 3px no-repeat;
+}
+
+/* ---------- Washi tape on the corners ---------- */
+.hero::before,
+.hero::after,
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: -9px;
+  width: 62px;
+  height: 20px;
+  pointer-events: none;
+  clip-path: polygon(3px 0, calc(100% - 3px) 0, 100% 12.5%, calc(100% - 3px) 25%, 100% 37.5%, calc(100% - 3px) 50%, 100% 62.5%, calc(100% - 3px) 75%, 100% 87.5%, calc(100% - 3px) 100%, 3px 100%, 0 87.5%, 3px 75%, 0 62.5%, 3px 50%, 0 37.5%, 3px 25%, 0 12.5%);
+}
+
+.hero::before,
+.card::before {
+  left: -11px;
+  transform: rotate(-38deg);
+  background: var(--ta-p), var(--ta-c);
+}
+
+.hero::after,
+.card::after {
+  right: -11px;
+  transform: rotate(38deg);
+  background: var(--tb-p), var(--tb-c);
+}
+
+/* Tape layouts cycle every 4 sections: both corners, centre strip, right corner, left corner */
+main > section:nth-of-type(4n+2)::before {
+  left: 50%;
+  top: -12px;
+  width: 90px;
+  height: 22px;
+  margin-left: -45px;
+  transform: rotate(-3deg);
+}
+
+main > section:nth-of-type(4n+2)::after,
+main > section:nth-of-type(4n+3)::before,
+main > section:nth-of-type(4n)::after {
+  display: none;
+}
+
+/* Tape colours cycle every 5 sections */
+main > section:nth-of-type(5n+1) { --ta-p: var(--p-stripes); --ta-c: var(--tape-sun); --tb-p: var(--p-dots); --tb-c: var(--tape-sky); }
+main > section:nth-of-type(5n+2) { --ta-p: var(--p-grid); --ta-c: var(--tape-gum); --tb-p: var(--p-stripes); --tb-c: var(--tape-mint); }
+main > section:nth-of-type(5n+3) { --ta-p: var(--p-dots); --ta-c: var(--tape-mint); --tb-p: var(--p-stripes); --tb-c: var(--tape-coral); }
+main > section:nth-of-type(5n+4) { --ta-p: var(--p-stripes); --ta-c: var(--tape-sky); --tb-p: var(--p-grid); --tb-c: var(--tape-sun); }
+main > section:nth-of-type(5n+5) { --ta-p: var(--p-dots); --ta-c: var(--tape-grape); --tb-p: var(--p-stripes); --tb-c: var(--tape-gum); }
+
+/* ---------- Colour helpers ---------- */
+.c-coral { --c: var(--coral); --c-text: var(--ink); }
+.c-sky { --c: var(--sky); --c-text: var(--ink); }
+.c-mint { --c: var(--mint); --c-text: var(--ink); }
+.c-sun { --c: var(--sun); --c-text: var(--ink); }
+.c-gum { --c: var(--gum); --c-text: var(--ink); }
+.c-grape { --c: var(--grape); --c-text: #FFFFFF; }
+
+/* ---------- Section number: folded-corner paper badge ---------- */
+.badge {
+  position: relative;
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  padding-top: .1rem;
+  border-radius: .45rem;
+  color: var(--c-text);
+  background: linear-gradient(225deg, transparent 0 .42rem, var(--c) .42rem);
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.15rem;
+  line-height: 1;
+  transform: rotate(-4deg);
+  filter: drop-shadow(0 2px 1.5px rgba(31, 42, 74, .28));
+}
+
+.badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: .6rem;
+  height: .6rem;
+  border-bottom-left-radius: .16rem;
+  background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, .24) 50%, rgba(0, 0, 0, .1));
+}
+
+/* ---------- "In short" sticky note ---------- */
+.summary {
+  background: var(--grain-soft), var(--note);
+}
+
+.summary h2 svg {
+  flex: none;
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
+.chips {
+  list-style: none;
+  margin: .2rem 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chips li {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  max-width: 100%;
+  padding: .36rem .85rem .36rem .4rem;
+  background: var(--card);
+  border-radius: 1.2rem;
+  box-shadow: inset 0 0 0 1px var(--card-edge), 0 2px 0 var(--rule);
+  font-weight: 700;
+  font-size: .93rem;
+  line-height: 1.3;
+}
+
+.chips li::before {
+  content: "";
+  flex: none;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: var(--ic-check) center / contain no-repeat;
+}
+
+/* ---------- Table of contents ---------- */
+.toc {
+  margin: 0 0 36px;
+}
+
+.toc-title {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin: 0 0 .7rem 2px;
+  font-weight: 700;
+  font-size: .86rem;
+  line-height: 1.2;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+/* A dashed "cut here" line after the title */
+.toc-title::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--kraft) 0 7px, transparent 7px 12px);
+}
+
+.toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.toc li {
+  max-width: 100%;
+}
+
+.toc a {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  max-width: 100%;
+  min-height: 40px;
+  padding: .26rem .85rem .26rem .34rem;
+  color: var(--text);
+  background: var(--card);
+  border-radius: 1.4rem;
+  box-shadow: inset 0 0 0 1px var(--card-edge), 0 3px 0 var(--rule), var(--shadow-sm);
+  font-size: .93rem;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.toc a:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 0 0 1px var(--card-edge), 0 1px 0 var(--rule);
+}
+
+.toc .n {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  padding-top: .08rem;
+  border-radius: 50%;
+  color: var(--c-text);
+  background: var(--c);
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: .95rem;
+  line-height: 1;
+}
+
+/* ---------- Lists ---------- */
+.list,
+.checks,
+.nope {
+  list-style: none;
+  margin: .5rem 0 1rem;
+  padding: 0;
+}
+
+.list > li,
+.checks > li,
+.nope > li {
+  position: relative;
+  margin: .55rem 0;
+}
+
+.list > li {
+  padding-left: 1.6rem;
+}
+
+/* Confetti-diamond bullets in the section colour */
+.list > li::before {
+  content: "";
+  position: absolute;
+  left: .3rem;
+  top: .58em;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 2px;
+  background: var(--c);
+  transform: rotate(45deg);
+  box-shadow: 1px 1px 0 rgba(31, 42, 74, .22);
+}
+
+.checks > li,
+.nope > li {
+  padding-left: 2rem;
+}
+
+.checks > li::before,
+.nope > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .2em;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: var(--ic-check) center / contain no-repeat;
+}
+
+.nope > li::before {
+  background-image: var(--ic-cross);
+}
+
+/* ---------- Data slips ---------- */
+.slips {
+  list-style: none;
+  margin: .7rem 0 1rem;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.slip {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px 12px 14px;
+  background: var(--card-soft);
+  border-radius: 14px;
+  box-shadow: inset 4px 0 0 var(--c);
+}
+
+.slip > div,
+.perm > div,
+.mail > div {
+  min-width: 0;
+}
+
+.slip strong {
+  display: block;
+  margin: 2px 0 1px;
+  line-height: 1.3;
+}
+
+.slip p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.ic {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: var(--c);
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, .14);
+  transform: rotate(-3deg);
+}
+
+.ic svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+/* ---------- Callouts ---------- */
+.note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 1rem 0;
+  padding: 12px 14px;
+  background: var(--card-soft);
+  border: 2px dashed var(--c);
+  border-radius: 14px;
+}
+
+.note > svg {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+}
+
+.note p {
+  margin: 0;
+}
+
+.perm {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: .4rem 0 1rem;
+  padding: 14px;
+  background: var(--card-soft);
+  border-radius: 14px;
+}
+
+.perm-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .3rem .6rem;
+  margin: 2px 0 .3rem;
+}
+
+.perm p:last-child {
+  margin-bottom: 0;
+}
+
+code {
+  padding: .16em .5em;
+  border-radius: 6px;
+  background: var(--card);
+  box-shadow: inset 0 0 0 1px var(--rule);
+  font-family: ui-monospace, "Roboto Mono", "Droid Sans Mono", Menlo, monospace;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.mini {
+  list-style: none;
+  margin: .5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.mini li {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .2rem .7rem .2rem .3rem;
+  color: var(--text-soft);
+  background: var(--card-soft);
+  border-radius: 999px;
+  font-size: .88rem;
+  line-height: 1.35;
+}
+
+.mini li::before {
+  content: "";
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  background: var(--ic-cross) center / contain no-repeat;
+}
+
+/* UI labels such as Settings > Reset progress */
+.ui {
+  display: inline-block;
+  padding: 0 .42em;
+  border-radius: 7px;
+  background: var(--card-soft);
+  box-shadow: inset 0 0 0 1.5px var(--rule), 0 1.5px 0 var(--rule);
+  font-weight: 700;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+
+.to {
+  padding: 0 .08em;
+  color: var(--coral);
+  font-family: var(--font-head);
+  font-weight: 800;
+}
+
+/* Airmail envelope for the contact address */
+.mail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: .9rem 0;
+  padding: 12px 14px;
+  border: 7px solid transparent;
+  border-radius: 16px;
+  background:
+    linear-gradient(var(--card), var(--card)) padding-box,
+    repeating-linear-gradient(135deg, var(--coral) 0 10px, var(--card) 10px 16px, var(--sky) 16px 26px, var(--card) 26px 32px) border-box;
+  box-shadow: var(--shadow-sm);
+}
+
+.mail-label {
+  margin: 0;
+  color: var(--text-soft);
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.mail-addr {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
+.small {
+  color: var(--text-soft);
+  font-size: .94rem;
+}
+
+/* ---------- Footer ---------- */
+.foot {
+  padding: 4px 0 30px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  max-width: 100%;
+  min-height: 50px;
+  padding: .65rem 1.3rem;
+  color: var(--ink);
+  background: var(--sun);
+  border-radius: 16px;
+  box-shadow: 0 4px 0 #D99B1A, 0 10px 18px -8px rgba(31, 42, 74, .45);
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.15rem;
+  line-height: 1.15;
+  text-decoration: none;
+}
+
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #D99B1A, 0 4px 10px -6px rgba(31, 42, 74, .45);
+}
+
+.btn svg {
+  flex: none;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* Kraft-paper price tag */
+.tag {
+  position: relative;
+  display: inline-block;
+  margin: 22px 0 0;
+  padding: .45rem 1.1rem .45rem 1.75rem;
+  color: var(--ink);
+  background: var(--grain-soft), var(--kraft);
+  font-weight: 700;
+  font-size: .95rem;
+  line-height: 1.3;
+  clip-path: polygon(14px 0, 100% 0, 100% 100%, 14px 100%, 0 50%);
+  transform: rotate(-2deg);
+}
+
+.tag::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  margin-top: -3.5px;
+  border-radius: 50%;
+  background: var(--desk);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .3);
+}
+
+.totop {
+  margin: 16px 0 0;
+  font-size: .92rem;
+}
+
+/* ---------- Motion (respects Reduce motion) ---------- */
+@keyframes pc-float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(2px, -4px) rotate(-3deg); }
+}
+
+@keyframes pc-pop {
+  0% { transform: scale(.985); }
+  60% { transform: scale(1.006); }
+  100% { transform: none; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+  .plane {
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    animation: pc-float 3.8s ease-in-out 5;
+  }
+  .card:target {
+    animation: pc-pop .45s ease-out;
+  }
+}
+
+/* ---------- Larger screens (tablets) ---------- */
+@media (min-width: 600px) {
+  body {
+    font-size: 1.06rem;
+  }
+  .page {
+    padding: 30px 28px calc(10px + env(safe-area-inset-bottom, 0px));
+  }
+  .card {
+    padding: 30px 30px 26px;
+  }
+  .hero-sky {
+    padding: 28px 20px 12px;
+  }
+  .emblem {
+    max-width: 300px;
+  }
+  .hero-body {
+    padding: 16px 32px 30px;
+  }
+  .wordmark {
+    font-size: 1.7rem;
+  }
+  h1 {
+    font-size: 2.9rem;
+  }
+  .slips {
+    grid-template-columns: 1fr 1fr;
+  }
+  .slips > li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Very narrow screens ---------- */
+@media (max-width: 340px) {
+  .page {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .card {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ---------- Dark theme: component tweaks (after the base rules so they win) ---------- */
+@media (prefers-color-scheme: dark) {
+  .hero-sky {
+    background-image:
+      radial-gradient(circle at 8% 16%, rgba(255, 246, 230, .95) 0 1.3px, transparent 2px),
+      radial-gradient(circle at 21% 62%, rgba(255, 246, 230, .7) 0 1px, transparent 1.6px),
+      radial-gradient(circle at 36% 10%, rgba(255, 246, 230, .8) 0 1.2px, transparent 1.8px),
+      radial-gradient(circle at 64% 8%, rgba(255, 246, 230, .9) 0 1px, transparent 1.6px),
+      radial-gradient(circle at 82% 24%, rgba(255, 246, 230, .85) 0 1.4px, transparent 2px),
+      radial-gradient(circle at 94% 56%, rgba(255, 246, 230, .7) 0 1px, transparent 1.6px),
+      radial-gradient(circle at 71% 84%, rgba(255, 246, 230, .6) 0 1px, transparent 1.6px),
+      radial-gradient(circle at 12% 86%, rgba(255, 246, 230, .6) 0 1.1px, transparent 1.7px),
+      linear-gradient(180deg, var(--sky-top), var(--sky-bottom));
+  }
+  .pill {
+    background: var(--sun);
+    color: var(--ink);
+  }
+  /* Night sky: a crescent moon instead of clouds */
+  .hero-sky::before {
+    left: 28px;
+    top: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: none;
+    box-shadow: 7px -5px 0 0 #FFE29A;
+    filter: drop-shadow(0 0 5px rgba(255, 226, 154, .45));
+  }
+  .hero-sky::after {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero" id="top">
+      <div class="hero-sky">
+      <svg class="emblem" viewBox="0 0 250 180" width="250" height="180" aria-hidden="true">
+        <defs>
+          <filter id="pc-soft" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="3"/>
+          </filter>
+        </defs>
+        <!-- soft shadow on the desk -->
+        <ellipse cx="98" cy="166" rx="64" ry="8" fill="#1F2A4A" opacity=".18" filter="url(#pc-soft)"/>
+        <!-- back half of the flight loop (behind the star) -->
+        <path d="M178 108 A82 24 0 0 0 14 108" transform="rotate(-12 96 108)" fill="none" stroke="#FF6B57" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 9" opacity=".55"/>
+        <!-- star-shaped paper cut-out -->
+        <g transform="rotate(-6 96 106)">
+          <g fill="#FFFFFF" stroke="#FFFFFF" stroke-width="18" stroke-linejoin="round">
+            <polygon points="96,54 111.28,84.97 145.46,89.93 120.73,114.03 126.57,148.07 96,132 65.43,148.07 71.27,114.03 46.54,89.93 80.72,84.97"/>
+            <polygon points="96,54 111.28,84.97 145.46,89.93 120.73,114.03 126.57,148.07 96,132 65.43,148.07 71.27,114.03 46.54,89.93 80.72,84.97" transform="translate(0 6)"/>
+          </g>
+          <polygon points="96,54 111.28,84.97 145.46,89.93 120.73,114.03 126.57,148.07 96,132 65.43,148.07 71.27,114.03 46.54,89.93 80.72,84.97" transform="translate(0 6)" fill="#DE9A1C" stroke="#DE9A1C" stroke-width="8" stroke-linejoin="round"/>
+          <polygon points="96,54 111.28,84.97 145.46,89.93 120.73,114.03 126.57,148.07 96,132 65.43,148.07 71.27,114.03 46.54,89.93 80.72,84.97" fill="#FFC83D" stroke="#FFC83D" stroke-width="8" stroke-linejoin="round"/>
+          <path d="M96 106L96 54L111.28 84.97ZM96 106L145.46 89.93L120.73 114.03ZM96 106L126.57 148.07L96 132ZM96 106L65.43 148.07L71.27 114.03ZM96 106L46.54 89.93L80.72 84.97Z" fill="#F2AE24"/>
+        </g>
+        <!-- front half of the loop, then the trail peels off towards the plane -->
+        <path d="M14 108 A82 24 0 0 0 178 108 C178 98 186 88 198 82" transform="rotate(-12 96 108)" fill="none" stroke="#FF6B57" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 9"/>
+        <!-- confetti and sparkles -->
+        <rect x="26" y="34" width="10" height="5" rx="1.5" fill="#FF7AB6" transform="rotate(-28 31 36.5)"/>
+        <rect x="170" y="140" width="9" height="5" rx="1.5" fill="#2EC4A0" transform="rotate(22 174.5 142.5)"/>
+        <rect x="150" y="22" width="8" height="4.5" rx="1.5" fill="#7A5CFF" transform="rotate(35 154 24)"/>
+        <circle cx="20" cy="150" r="3.2" fill="#7A5CFF"/>
+        <circle cx="128" cy="30" r="2.6" fill="#FF6B57"/>
+        <path d="M60 18q1.8 7 8.5 8.5q-6.7 1.5-8.5 8.5q-1.8-7-8.5-8.5q6.7-1.5 8.5-8.5z" fill="#FFB21E"/>
+        <path d="M228 108q1.3 5 6 6q-4.7 1-6 6q-1.3-5-6-6q4.7-1 6-6z" fill="#FF7AB6"/>
+        <!-- white paper plane -->
+        <g class="plane">
+          <g transform="translate(210 46) rotate(-38) scale(1.12)">
+            <path d="M40 0L-30 -22L-24 24Z" fill="#1F2A4A" opacity=".2" transform="translate(-6 13)" filter="url(#pc-soft)"/>
+            <g stroke="#1F2A4A" stroke-width="2.8" stroke-linejoin="round">
+              <path d="M40 0L-30 -22L-11 1Z" fill="#FFFFFF"/>
+              <path d="M40 0L-11 1L-24 24Z" fill="#E6ECF9"/>
+              <path d="M40 0L-11 1L-4 10Z" fill="#AEBDE2"/>
+            </g>
+          </g>
+        </g>
+      </svg>
+      </div>
+      <div class="hero-body">
+        <p class="wordmark">Paper Clash <span class="two">2</span></p>
+        <h1>Privacy Policy</h1>
+        <p class="byline">by NG Studio</p>
+        <p class="pill"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16.5" rx="3.5" fill="#FFFDF8"/><path d="M3 9.5V8a3.5 3.5 0 0 1 3.5-3.5h11A3.5 3.5 0 0 1 21 8v1.5z" fill="#FF6B57"/><path d="M8 2.8v3.6M16 2.8v3.6" stroke="#FFFDF8" stroke-width="2.4" stroke-linecap="round"/><path d="M7.5 13.5h2.5M11 13.5h2.5M14.5 13.5h2M7.5 17h2.5M11 17h2.5" stroke="#1F2A4A" stroke-width="2" stroke-linecap="round"/></svg><span>Effective <time datetime="2026-11-15">15 November 2026</time></span></p>
+      </div>
+    </header>
+
+    <main>
+      <section class="card summary c-mint" id="in-short">
+        <h2><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#2EC4A0"/><path d="M16 6.5l2.6 6.9 6.9 2.6-6.9 2.6L16 25.5l-2.6-6.9L6.5 16l6.9-2.6z" fill="#FFFDF8"/></svg><span>In short</span></h2>
+        <ul class="chips">
+          <li>No account, no login</li>
+          <li>No ads, no purchases</li>
+          <li>No analytics or tracking</li>
+          <li>Progress stays on your device</li>
+          <li>Delete it any time</li>
+        </ul>
+        <p>Paper Clash 2 is an offline game. It doesn’t collect personal information and it doesn’t send anything over the internet. Your progress is saved on your device, and you can delete it whenever you like. The details are below.</p>
+      </section>
+
+      <nav class="toc" aria-labelledby="toc-title">
+        <h2 class="toc-title" id="toc-title">Jump to a section</h2>
+        <ol>
+          <li class="c-coral"><a href="#who-we-are"><span class="n">1</span>Who we are</a></li>
+          <li class="c-sky"><a href="#data-we-handle"><span class="n">2</span>Game data</a></li>
+          <li class="c-mint"><a href="#not-collected"><span class="n">3</span>What we don’t collect</a></li>
+          <li class="c-sun"><a href="#storage"><span class="n">4</span>Storage and backups</a></li>
+          <li class="c-grape"><a href="#permissions"><span class="n">5</span>Permissions</a></li>
+          <li class="c-gum"><a href="#children"><span class="n">6</span>Children</a></li>
+          <li class="c-coral"><a href="#your-choices"><span class="n">7</span>Your choices</a></li>
+          <li class="c-sky"><a href="#security"><span class="n">8</span>Security</a></li>
+          <li class="c-mint"><a href="#third-parties"><span class="n">9</span>Third parties and future ads</a></li>
+          <li class="c-sun"><a href="#changes"><span class="n">10</span>Changes</a></li>
+          <li class="c-grape"><a href="#contact"><span class="n">11</span>Contact</a></li>
+        </ol>
+      </nav>
+
+      <section class="card c-coral" id="who-we-are">
+        <h2><span class="badge">1</span><span>Who we are</span></h2>
+        <p>Paper Clash 2 (“the game”) is made by <strong>NG Studio</strong> (“we”, “us”, “our”). This policy explains what information the game uses, where it is kept and what choices you have. It applies to the Paper Clash 2 app for Android.</p>
+        <p>Under data protection laws such as the GDPR, NG Studio is the “controller” of any personal information covered by this policy. In plain words: we are the ones responsible for it.</p>
+        <p>Email: <a class="ph-link" href="mailto:%5Bcontact%20email%5D"><span class="ph">[contact email]</span></a></p>
+        <p>Playing the game is also covered by our <a href="terms.html">Terms of Use</a>.</p>
+      </section>
+
+      <section class="card c-sky" id="data-we-handle">
+        <h2><span class="badge">2</span><span>What data the game handles</span></h2>
+        <p>To work, the game saves a small amount of game data on your device:</p>
+        <ul class="slips">
+          <li class="slip c-sun">
+            <span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 3.4l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z" fill="#FFFDF8" stroke="#1F2A4A" stroke-width="2" stroke-linejoin="round"/></svg></span>
+            <div><strong>Progress</strong><p>The levels you have unlocked, your stars, quests, achievements, sticker album and simple play stats.</p></div>
+          </li>
+          <li class="slip c-mint">
+            <span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="8.2" fill="#FFC83D" stroke="#1F2A4A" stroke-width="2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="#1F2A4A" stroke-width="1.8"/></svg></span>
+            <div><strong>Coins and items</strong><p>Your coins, boosters, plane skins and ribbons, and what you have equipped.</p></div>
+          </li>
+          <li class="slip c-sky">
+            <span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 8h16M4 16h16" stroke="#1F2A4A" stroke-width="2.2" stroke-linecap="round"/><circle cx="9" cy="8" r="2.8" fill="#FFFDF8" stroke="#1F2A4A" stroke-width="2"/><circle cx="15" cy="16" r="2.8" fill="#FFFDF8" stroke="#1F2A4A" stroke-width="2"/></svg></span>
+            <div><strong>Settings</strong><p>Sound, music, vibration, graphics and control choices, and whether you have finished the tutorial.</p></div>
+          </li>
+          <li class="slip c-gum">
+            <span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3" fill="#FFFDF8"/><path d="M2.5 10V8.5a3 3 0 0 1 3-3h13a3 3 0 0 1 3 3V10z" fill="#FF6B57"/><rect x="2.5" y="5.5" width="19" height="13" rx="3" fill="none" stroke="#1F2A4A" stroke-width="2"/><path d="M7 14.5h10" stroke="#1F2A4A" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <div><strong>Nickname</strong><p>The player name you type. It is only shown inside the game on your device. It doesn’t need to be your real name.</p></div>
+          </li>
+          <li class="slip c-grape">
+            <span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10" rx="1.8" fill="#FFFDF8" stroke="#1F2A4A" stroke-width="2"/><rect x="3" y="7.5" width="18" height="4" rx="1.5" fill="#FF6B57" stroke="#1F2A4A" stroke-width="2"/><path d="M12 7.5v13" stroke="#1F2A4A" stroke-width="2"/><path d="M12 7.3C10.6 4 7 3.6 7.2 5.9c.2 1.7 2.6 1.4 4.8 1.4zM12 7.3c1.4-3.3 5-3.7 4.8-1.4-.2 1.7-2.6 1.4-4.8 1.4z" fill="#FFC83D" stroke="#1F2A4A" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+            <div><strong>Daily rewards</strong><p>When you last claimed a daily gift or free spin, so the game knows when the next one is ready.</p></div>
+          </li>
+        </ul>
+        <p>We use this data only to run the game: to save your progress, remember your settings and show your nickname on screen. It stays on your device. <strong>We can’t see it, and the game itself never sends it anywhere.</strong> Android’s own backup feature is explained in <a href="#storage">section&nbsp;4</a>.</p>
+        <h3>If you email us</h3>
+        <p>If you choose to contact us, we receive your email address and whatever you write. We use it only to reply and help you. We never use it for marketing, and we delete it once we no longer need it.</p>
+      </section>
+
+      <section class="card c-mint" id="not-collected">
+        <h2><span class="badge">3</span><span>What we do not collect</span></h2>
+        <p>Paper Clash 2 does <strong>not</strong> collect, store or share:</p>
+        <ul class="nope">
+          <li>your name, email address, phone number or home address (your nickname never leaves your device);</li>
+          <li>your location;</li>
+          <li>your contacts, photos, files, camera or microphone;</li>
+          <li>your advertising ID or any other device identifier;</li>
+          <li>analytics, usage tracking or crash reports;</li>
+          <li>payment details (there is nothing to buy);</li>
+          <li>account or login details (there are no accounts).</li>
+        </ul>
+        <p>We don’t sell, rent or trade any data, we don’t build profiles and we don’t use your information for advertising.</p>
+      </section>
+
+      <section class="card c-sun" id="storage">
+        <h2><span class="badge">4</span><span>Storage and backups</span></h2>
+        <p>Your game data lives in one save file, plus a spare copy so that a crash while saving can’t wipe your progress. Both are kept in the game’s private storage on your device. Android keeps this storage private to the game, so other apps can’t read it.</p>
+        <p>We don’t run servers for the game, and we don’t keep a copy of your data anywhere.</p>
+        <h3>Android backups</h3>
+        <p>If backup is turned on for your device, Android’s Auto Backup may include the game’s save file in your device backup (for example, in your Google account). Android may also copy it when you move to a new phone. This is how your progress can come back after you reinstall the game.</p>
+        <div class="note c-sun">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#FFC83D"/><path d="M12 11v6" stroke="#1F2A4A" stroke-width="2.6" stroke-linecap="round"/><circle cx="12" cy="7.2" r="1.7" fill="#1F2A4A"/></svg>
+          <p>These backups are made and stored by Android and Google, not by NG Studio, and Google’s privacy policy applies to them. We can’t see or access them. You can turn backup on or off in your device settings.</p>
+        </div>
+      </section>
+
+      <section class="card c-grape" id="permissions">
+        <h2><span class="badge">5</span><span>Permissions</span></h2>
+        <div class="perm">
+          <span class="ic c-sun"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><rect x="7.5" y="3" width="9" height="18" rx="2.2" fill="#FFFDF8" stroke="#1F2A4A" stroke-width="2"/><path d="M10.5 17.5h3" stroke="#1F2A4A" stroke-width="2" stroke-linecap="round"/><path d="M4.2 8.5v7M1.8 10.5v3M19.8 8.5v7M22.2 10.5v3" stroke="#1F2A4A" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <div>
+            <p class="perm-title"><strong>Vibration</strong> <code>VIBRATE</code></p>
+            <p>Lets the game give small haptic buzzes, for example when you claim land or pick up a power-up. It gives no access to your data. You can switch it off any time in <span class="ui">Settings</span>&nbsp;<span class="to">→</span> <span class="ui">Vibration</span>.</p>
+          </div>
+        </div>
+        <p>That is the only permission the game uses. It does not ask for access to:</p>
+        <ul class="mini">
+          <li>Internet</li>
+          <li>Location</li>
+          <li>Contacts</li>
+          <li>Camera</li>
+          <li>Microphone</li>
+          <li>Photos and files</li>
+          <li>Notifications</li>
+        </ul>
+      </section>
+
+      <section class="card c-gum" id="children">
+        <h2><span class="badge">6</span><span>Children</span></h2>
+        <p>Paper Clash 2 is made for a general audience, and its content is friendly for players of all ages.</p>
+        <p>We don’t knowingly collect personal information from anyone, including children under 13 (or the minimum age that applies where you live). The game never asks for personal information, and the nickname stays on the device.</p>
+        <p>If you are a parent or guardian and think your child has sent us personal information, for example by email, please <a href="#contact">contact us</a> and we will delete it.</p>
+      </section>
+
+      <section class="card c-coral" id="your-choices">
+        <h2><span class="badge">7</span><span>Your choices and deleting data</span></h2>
+        <ul class="list">
+          <li><strong>Sound, music and vibration:</strong> turn each one on or off in <span class="ui">Settings</span>.</li>
+          <li><strong>Nickname:</strong> change it whenever you like in <span class="ui">Settings</span>.</li>
+          <li><strong>Delete everything:</strong> go to <span class="ui">Settings</span>&nbsp;<span class="to">→</span> <span class="ui">Reset progress</span>. This erases all of the game’s saved data on this device. It can’t be undone.</li>
+          <li><strong>Other ways:</strong> clear the game’s storage in your device settings (usually <span class="ui">Settings</span>&nbsp;<span class="to">→</span> <span class="ui">Apps</span>&nbsp;<span class="to">→</span> <span class="ui">Paper Clash 2</span>&nbsp;<span class="to">→</span> <span class="ui">Storage</span>&nbsp;<span class="to">→</span> <span class="ui">Clear storage</span>), or uninstall the game.</li>
+          <li><strong>Backups:</strong> a copy in your Android backup is managed by Android and Google. You can manage or delete backups, or turn backup off, in your device or Google account settings.</li>
+        </ul>
+        <h3>Your privacy rights</h3>
+        <p>Depending on where you live, you may have the right to access, correct, delete or move your personal information, or to object to how it is used. Because the game keeps your data on your device, you can do most of this yourself with the options above. For anything else, including emails you have sent us, <a href="#contact">contact us</a> and we will help. You can also complain to your local data protection authority.</p>
+      </section>
+
+      <section class="card c-sky" id="security">
+        <h2><span class="badge">8</span><span>Security</span></h2>
+        <p>Keeping things simple also keeps them safe. Your game data stays in the game’s private storage on your device, and the game sends nothing over the internet. There is no server of ours holding your data and nothing to intercept on the way.</p>
+        <p>No system is perfectly secure, though. Anyone who can unlock your device may be able to open the game and see your progress, so we recommend using a screen lock.</p>
+      </section>
+
+      <section class="card c-mint" id="third-parties">
+        <h2><span class="badge">9</span><span>Third parties and future advertising</span></h2>
+        <h3>Today</h3>
+        <p>The game contains no advertising, analytics or tracking code from any other company, and it shares no data with anyone.</p>
+        <ul class="list">
+          <li><strong>Google Play and Android.</strong> You get the game from Google Play and it runs on Android, including Android’s backup feature. Google’s own terms and privacy policy apply to those services. Google may give us general statistics, such as install numbers, and crash reports from people who chose to share diagnostics with Google. These don’t tell us who you are.</li>
+          <li><strong>Other apps you open.</strong> Buttons such as Share or Rate us, and email links, open another app on your device, such as Google Play, your email app or an app you pick to share with. Those apps have their own privacy policies.</li>
+        </ul>
+        <h3>Ads in the future</h3>
+        <p>We may add advertising in a future version of the game, for example rewarded ads from Google AdMob. Ad services can collect information such as your device’s advertising ID. Before any ads appear, we will:</p>
+        <ul class="checks">
+          <li>update this policy to explain what is collected, by whom and why;</li>
+          <li>ask for your consent where the law requires it;</li>
+          <li>update the Data safety section on the game’s Google Play page.</li>
+        </ul>
+        <p>Ads can only arrive with a game update. The version you are using now has no ads and no code from any ad company.</p>
+      </section>
+
+      <section class="card c-sun" id="changes">
+        <h2><span class="badge">10</span><span>Changes to this policy</span></h2>
+        <p>We may update this policy from time to time, for example when we add a feature or when the law changes. The latest version is always here in the game, with its “Effective” date at the top.</p>
+        <p>If we make an important change, such as adding ads, we will tell you in the game before it applies and ask for your consent where the law requires it.</p>
+      </section>
+
+      <section class="card c-grape" id="contact">
+        <h2><span class="badge">11</span><span>Contact</span></h2>
+        <p>Questions, requests or worries about your privacy? We’re happy to help.</p>
+        <div class="mail">
+          <span class="ic c-sky"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="#FFFDF8" stroke="#1F2A4A" stroke-width="2"/><path d="M3.5 7l8.5 6.2L20.5 7" fill="none" stroke="#1F2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <p class="mail-label">Email NG Studio</p>
+            <p class="mail-addr"><a class="ph-link" href="mailto:%5Bcontact%20email%5D"><span class="ph">[contact email]</span></a></p>
+          </div>
+        </div>
+        <p class="small">Please mention “Paper Clash 2” in your message so we can help you faster.</p>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <a class="btn" href="terms.html">Read the Terms of Use <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12h13M13 6.5l5.5 5.5-5.5 5.5" fill="none" stroke="#1F2A4A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <p><span class="tag">© 2026 NG Studio</span></p>
+      <p class="totop"><a href="#top">Back to top</a></p>
+    </footer>
+  </div>
+</body>
+</html>

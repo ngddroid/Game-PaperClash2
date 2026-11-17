@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 12+: cloud backup and device transfer carry the save file only. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="file" path="paperclash_save.json" />
+        <include domain="file" path="paperclash_save.json.bak" />
+    </cloud-backup>
+    <device-transfer>
+        <include domain="file" path="paperclash_save.json" />
+        <include domain="file" path="paperclash_save.json.bak" />
+    </device-transfer>
+</data-extraction-rules>

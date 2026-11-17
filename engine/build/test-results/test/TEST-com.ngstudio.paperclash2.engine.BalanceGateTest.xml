@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ngstudio.paperclash2.engine.BalanceGateTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-15T03:12:10.481Z" hostname="ngd-vis-MacBook-Air.local" time="1.057">
+  <properties/>
+  <testcase name="firstTenLevelsAreWinnableForANovice" classname="com.ngstudio.paperclash2.engine.BalanceGateTest" time="1.057"/>
+  <system-out><![CDATA[L1 novice win 100% (median 37.31627s, popped 0/40) casual 100% (median 32.76634s)
+L2 novice win 100% (median 48.73276s, popped 0/40) casual 100% (median 42.216194s)
+L3 novice win 100% (median 58.832607s, popped 0/40) casual 100% (median 52.31604s)
+L4 novice win 100% (median 73.884636s, popped 0/40) casual 100% (median 60.16592s)
+L5 novice win 100% (median 37.63293s, popped 0/40) casual 100% (median 36.316284s)
+L6 novice win 100% (median 75.301605s, popped 0/40) casual 100% (median 65.88293s)
+L7 novice win 100% (median 85.537125s, popped 0/40) casual 100% (median 76.735245s)
+L8 novice win 100% (median 87.43753s, popped 0/40) casual 100% (median 74.3514s)
+L9 novice win 100% (median 102.25736s, popped 0/40) casual 100% (median 86.253944s)
+L10 novice win 100% (median 30.833035s, popped 0/40) casual 100% (median 35.3163s)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

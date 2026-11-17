@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ngstudio.paperclash2.engine.LevelsTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-15T03:12:11.540Z" hostname="ngd-vis-MacBook-Air.local" time="3.667">
+  <properties/>
+  <testcase name="everyShapeBuildsAPlayableBoardSmallAndLarge" classname="com.ngstudio.paperclash2.engine.LevelsTest" time="0.76"/>
+  <testcase name="modeCadence" classname="com.ngstudio.paperclash2.engine.LevelsTest" time="0.0"/>
+  <testcase name="specsAreDeterministic" classname="com.ngstudio.paperclash2.engine.LevelsTest" time="0.05"/>
+  <testcase name="allFiveThousandLevelsAreValid" classname="com.ngstudio.paperclash2.engine.LevelsTest" time="2.847"/>
+  <testcase name="shapeLibraryHasSeventyPlusUniqueShapes" classname="com.ngstudio.paperclash2.engine.LevelsTest" time="0.0"/>
+  <testcase name="scheduleNeverRepeatsAShapeWithinEightLevels" classname="com.ngstudio.paperclash2.engine.LevelsTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

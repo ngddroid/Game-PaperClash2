@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="paper_cream">#FFFFF6E6</color>
+    <color name="paper_white">#FFFFFDF8</color>
+    <color name="ink_navy">#FF1F2A4A</color>
+    <color name="coral">#FFFF6B57</color>
+    <color name="sun">#FFFFC83D</color>
+    <color name="mint">#FF2EC4A0</color>
+    <color name="sky">#FF4BA3FF</color>
+    <color name="grape">#FF7A5CFF</color>
+</resources>
